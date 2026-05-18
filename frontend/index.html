@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TaskFlow - Professional Task Management System. Sign in to manage your tasks, teams, and projects.">
+    <title>TaskFlow - Sign In</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="auth-container">
+            <div class="auth-card">
+                <div class="auth-header">
+                    <div class="auth-logo">⚡</div>
+                    <h1>TaskFlow</h1>
+                    <p>Manage your work, beautifully.</p>
+                </div>
+
+                <div id="authError" class="auth-error"></div>
+
+                <!-- Login Form -->
+                <div id="loginSection">
+                    <form id="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="loginPassword">Password</label>
+                            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Sign In</button>
+                    </form>
+                    <div class="auth-toggle">
+                        Don't have an account? <a id="showSignup">Sign Up</a>
+                    </div>
+                </div>
+
+                <!-- Signup Form -->
+                <div id="signupSection" class="hidden">
+                    <form id="signupForm" class="auth-form">
+                        <div class="form-group">
+                            <label for="signupName">Full Name</label>
+                            <input type="text" id="signupName" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupEmail">Email Address</label>
+                            <input type="email" id="signupEmail" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="signupPassword">Password</label>
+                            <input type="password" id="signupPassword" placeholder="Min 6 characters" minlength="6" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                    <div class="auth-toggle">
+                        Already have an account? <a id="showLogin">Sign In</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/api.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

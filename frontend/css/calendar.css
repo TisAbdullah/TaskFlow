@@ -1,0 +1,45 @@
+/* Calendar, Meetings, Notes, Team, Profile page styles */
+.calendar-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-lg); }
+.calendar-nav { display: flex; align-items: center; gap: var(--space-md); }
+.calendar-nav h2 { min-width: 200px; text-align: center; font-size: 1.2rem; }
+.calendar-grid { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); overflow: hidden; }
+.calendar-weekdays { display: grid; grid-template-columns: repeat(7, 1fr); background: var(--bg-glass); border-bottom: 1px solid var(--border-color); }
+.calendar-weekday { padding: 12px; text-align: center; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); text-transform: uppercase; }
+.calendar-days { display: grid; grid-template-columns: repeat(7, 1fr); }
+.calendar-day { min-height: 100px; padding: 8px; border: 1px solid var(--border-color); cursor: pointer; transition: background var(--transition-fast); }
+.calendar-day:hover { background: var(--bg-glass-hover); }
+.calendar-day.other-month { opacity: 0.3; }
+.calendar-day.today { background: var(--accent-primary-light); }
+.calendar-day.today .day-number { color: var(--accent-primary); font-weight: 700; }
+.day-number { font-size: 0.85rem; font-weight: 500; margin-bottom: 4px; }
+.day-event { font-size: 0.65rem; padding: 2px 6px; border-radius: 4px; margin-bottom: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.day-event.task { background: var(--accent-primary-light); color: var(--accent-primary); }
+.day-event.meeting { background: var(--accent-secondary-light); color: var(--accent-secondary); }
+.meetings-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: var(--space-md); }
+.meeting-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: var(--space-lg); transition: all var(--transition-base); }
+.meeting-card:hover { border-color: var(--accent-secondary); box-shadow: var(--shadow-md); }
+.meeting-card h3 { margin-bottom: 8px; }
+.meeting-meta { display: flex; flex-direction: column; gap: 6px; margin-bottom: 12px; }
+.meeting-meta span { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--text-secondary); }
+.meeting-actions { display: flex; gap: var(--space-sm); }
+.notes-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: var(--space-md); }
+.note-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: var(--space-lg); transition: all var(--transition-base); position: relative; }
+.note-card:hover { border-color: var(--accent-primary); box-shadow: var(--shadow-md); transform: translateY(-2px); }
+.note-card.pinned { border-color: var(--color-warning); }
+.note-pin { position: absolute; top: 12px; right: 12px; color: var(--color-warning); cursor: pointer; }
+.note-card h3 { font-size: 1rem; margin-bottom: 8px; padding-right: 24px; }
+.note-card .note-content { font-size: 0.85rem; color: var(--text-secondary); margin-bottom: 12px; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; white-space: pre-wrap; }
+.note-card .note-date { font-size: 0.75rem; color: var(--text-muted); }
+.note-card .note-actions { display: flex; gap: var(--space-sm); margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border-color); }
+.members-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: var(--space-md); }
+.member-card { background: var(--bg-glass); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: var(--space-md); display: flex; align-items: center; gap: 12px; transition: all var(--transition-base); }
+.member-card:hover { border-color: var(--accent-primary); }
+.member-info { flex: 1; }
+.member-info h4 { font-size: 0.9rem; margin-bottom: 2px; }
+.member-info p { font-size: 0.8rem; color: var(--text-muted); }
+.member-role { font-size: 0.7rem; padding: 2px 8px; border-radius: 10px; background: var(--accent-primary-light); color: var(--accent-primary); text-transform: capitalize; }
+.team-card { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: var(--space-lg); margin-bottom: var(--space-md); }
+.team-card-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-md); }
+.profile-container { max-width: 600px; }
+.profile-header { display: flex; align-items: center; gap: var(--space-lg); margin-bottom: var(--space-xl); }
+.profile-form .form-group { margin-bottom: var(--space-md); }
