@@ -15,6 +15,7 @@ const meetingRoutes = require('./routes/meetings');
 const noteRoutes = require('./routes/notes');
 const dashboardRoutes = require('./routes/dashboard');
 const notificationRoutes = require('./routes/notifications');
+const databaseRoutes = require('./routes/database');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -38,6 +39,7 @@ app.use('/api/meetings', meetingRoutes);
 app.use('/api/notes', noteRoutes);
 app.use('/api/dashboard', dashboardRoutes);
 app.use('/api/notifications', notificationRoutes);
+app.use('/api/database', databaseRoutes);
 
 // ============================================
 // Serve frontend pages

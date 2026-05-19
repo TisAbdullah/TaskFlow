@@ -1,0 +1,151 @@
+/* Database Admin specific styles */
+
+.db-container {
+    display: flex;
+    gap: 20px;
+    height: calc(100vh - 120px);
+    overflow: hidden;
+}
+
+.db-sidebar {
+    width: 250px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.db-sidebar-header {
+    padding: 15px;
+    border-bottom: 1px solid var(--border-color);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.db-table-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow-y: auto;
+    flex-grow: 1;
+}
+
+.db-table-item {
+    padding: 12px 15px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-secondary);
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.db-table-item:hover {
+    background-color: var(--bg-hover);
+}
+
+.db-table-item.active {
+    background-color: rgba(var(--primary-rgb), 0.1);
+    color: var(--primary-color);
+    border-left: 3px solid var(--primary-color);
+}
+
+.db-content {
+    flex-grow: 1;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.db-content-header {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.db-content-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.db-data-container {
+    flex-grow: 1;
+    overflow: auto;
+    padding: 0;
+}
+
+.db-data-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.db-data-table th, .db-data-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+    border-right: 1px solid var(--border-color);
+}
+
+.db-data-table th {
+    background-color: var(--bg-body);
+    color: var(--text-secondary);
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.db-data-table td {
+    color: var(--text-primary);
+    position: relative;
+}
+
+.db-data-table td.editable:hover {
+    background-color: rgba(var(--primary-rgb), 0.05);
+    cursor: text;
+}
+
+.db-data-table td.editable::after {
+    content: '✎';
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0;
+    font-size: 0.8rem;
+    color: var(--primary-color);
+    transition: opacity 0.2s;
+}
+
+.db-data-table td.editable:hover::after {
+    opacity: 0.5;
+}
+
+.db-cell-input {
+    width: 100%;
+    background: var(--bg-body);
+    border: 1px solid var(--primary-color);
+    color: var(--text-primary);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: inherit;
+    outline: none;
+}
+
+.db-empty-state {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+}
